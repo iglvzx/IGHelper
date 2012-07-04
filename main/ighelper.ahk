@@ -10,7 +10,17 @@ SetWorkingDir, %A_ScriptDir%\..
     Feedback("Win + /", "Show Hotkeys")
     MsgBox, , IGHelper: Hotkeys, % GetHotkeyList()
     return
+    
+; Desktop ----------------------------------------------------------------------
+#^d::
+    KeyWaitWin()
+    KeyWait, Ctrl
+    KeyWait, d
+    Feedback("Win + Ctrl + D", "Toggle Desktop Icons")
+    Run, desktop\toggle_icons.ahk
+    return
 
+; Firefox ----------------------------------------------------------------------
 #f::
     KeyWaitWin()
     KeyWait, f
