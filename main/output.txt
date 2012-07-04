@@ -1,5 +1,0 @@
-
----------- IGHELPER.AHK
-    Feedback("Win + /", "Show Hotkeys")
-    Feedback("Win + F", "Activate Firefox")
-    Feedback("Win + Ctrl + F", "Open Firefox Profile Manager")

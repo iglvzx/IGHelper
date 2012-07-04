@@ -23,5 +23,7 @@ GetHotkeyList()
     StringReplace, text, text, `"`), , All
     StringReplace, text, text, `"`, `", ` `:` , All
     
+    FileDelete, main\output.txt
+    
     return text
 }
