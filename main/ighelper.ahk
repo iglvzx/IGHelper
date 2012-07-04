@@ -7,8 +7,8 @@ SetWorkingDir, %A_ScriptDir%\..
 #/::
     KeyWaitWin()
     Keywait, `/
-    Feedback("Win + /", "Show Hotkeys")
-    MsgBox, , IGHelper: Hotkeys, % GetHotkeyList()
+    Feedback("Win + /", "Help")
+    GoSub, HelpCommand
     return
     
 ; Desktop ----------------------------------------------------------------------
