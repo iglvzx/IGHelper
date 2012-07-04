@@ -19,6 +19,14 @@ SetWorkingDir, %A_ScriptDir%\..
     Feedback("Win + Ctrl + D", "Toggle Desktop Icons")
     Run, desktop\toggle_icons.ahk
     return
+    
+; Control Panel ----------------------------------------------------------------
+#v::
+    KeyWaitWin()
+    KeyWait, v
+    Feedback("Win + V", "Volume Control")
+    Run, control\volume.ahk
+    return
 
 ; Firefox ----------------------------------------------------------------------
 #f::
