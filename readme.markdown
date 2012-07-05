@@ -1,5 +1,10 @@
 ##IGHelper
 
+###Compatibility
+
+- Windows 7
+- [AutoHotkey_L](http://l.autohotkey.net/)
+
 ###Instructions
 
 For a list of assigned hotkeys, press <kbd>Win</kbd>+<kbd>/</kbd> or right-click the tray icon and select **Help**.
