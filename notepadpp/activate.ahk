@@ -2,10 +2,10 @@
 #Include %A_ScriptDir%\..
 #Include share\config.ahk
 
-Process, Exist, firefox.exe
+Process, Exist, notepad++.exe
 if (ErrorLevel = 0)
 {
-    Run, % Program_Files_x86 . "\Mozilla Firefox\firefox.exe"
+    Run, % Program_Files_x86 . "\Notepad++\notepad++.exe"
 }
 else
 {

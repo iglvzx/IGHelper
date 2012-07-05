@@ -12,6 +12,7 @@ SetTitleMatchMode, RegEx
 
 ; Environment Variables --------------------------------------------------------
 Drive := "C:"
-User_Profile := Drive . "\Users\iglvzx"
+Username := "iglvzx"
+User_Profile := Drive . "\Users\" . Username
 Program_Files := Drive . "\Program Files"
 Program_Files_x86 := Program_Files . " (x86)"

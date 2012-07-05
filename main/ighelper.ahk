@@ -10,7 +10,7 @@ SetWorkingDir, %A_ScriptDir%\..
     Feedback("Win + /", "Help")
     GoSub, HelpCommand
     return
-    
+
 ; Desktop ----------------------------------------------------------------------
 #^d::
     KeyWaitWin()
@@ -19,8 +19,15 @@ SetWorkingDir, %A_ScriptDir%\..
     Feedback("Win + Ctrl + D", "Toggle Desktop Icons")
     Run, desktop\toggle_icons.ahk
     return
-    
+
 ; Control Panel ----------------------------------------------------------------
+#Tab::
+    KeyWaitWin()
+    KeyWait, Tab
+    Feedback("Win + Tab", "Task Manager")
+    Run, control\task_manager.ahk
+    return
+
 #v::
     KeyWaitWin()
     KeyWait, v
@@ -28,11 +35,19 @@ SetWorkingDir, %A_ScriptDir%\..
     Run, control\volume.ahk
     return
 
+; Explorer ---------------------------------------------------------------------
+#h::
+    KeyWaitWin()
+    Keywait, h
+    Feedback("Win + H", "Home")
+    Run, explorer\home.ahk
+    return
+
 ; Firefox ----------------------------------------------------------------------
 #f::
     KeyWaitWin()
     KeyWait, f
-    Feedback("Win + F", "Activate Firefox")
+    Feedback("Win + F", "Firefox")
     Run, firefox\activate.ahk
     return
 
@@ -40,6 +55,14 @@ SetWorkingDir, %A_ScriptDir%\..
     KeyWaitWin()
     KeyWait, Ctrl
     KeyWait, f
-    Feedback("Win + Ctrl + F", "Open Firefox Profile Manager")
+    Feedback("Win + Ctrl + F", "Firefox Profile Manager")
     Run, firefox\profile_manager.ahk
+    return
+
+; Notepad++ --------------------------------------------------------------------
+#n::
+    KeyWaitWin()
+    KeyWait, n
+    Feedback("Win + N", "Notepad++")
+    Run, notepadpp\activate.ahk
     return
