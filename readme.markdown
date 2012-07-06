@@ -7,6 +7,8 @@
 
 ###Instructions
 
+![feedback](https://github.com/iglvzx/IGHelper/raw/master/readme/tray.png)
+
 For a list of assigned hotkeys, press <kbd>Win</kbd>+<kbd>/</kbd> or right-click the tray icon and select **Help**.
 
 ![icon](https://github.com/iglvzx/IGHelper/raw/master/readme/icon.png)&nbsp;![menu](https://github.com/iglvzx/IGHelper/raw/master/readme/menu.png)
