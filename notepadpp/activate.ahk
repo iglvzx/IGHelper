@@ -1,4 +1,4 @@
-#NoTrayIcon
+﻿#NoTrayIcon
 #Include %A_ScriptDir%\..
 #Include share\config.ahk
 

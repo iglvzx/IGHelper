@@ -1,4 +1,4 @@
-#SingleInstance Force
+﻿#SingleInstance Force
 #NoEnv
 #Include %A_ScriptDir%\..
 #Include share\functions.ahk

@@ -1,4 +1,4 @@
-Feedback(title, text)
+﻿Feedback(title, text)
 {
     TrayTip, %title%, %text%
     return

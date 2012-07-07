@@ -1,4 +1,4 @@
-SetWorkingDir, %A_ScriptDir%\..
+﻿SetWorkingDir, %A_ScriptDir%\..
 #Include %A_ScriptDir%\..
 #Include share\config.ahk
 

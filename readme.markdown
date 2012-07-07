@@ -1,9 +1,9 @@
-##IGHelper
+﻿##IGHelper
 
 ###Compatibility
 
 - Windows 7
-- [AutoHotkey_L](http://l.autohotkey.net/)
+- [AutoHotkey_L (Unicode, 32-bit)](http://l.autohotkey.net/)
 
 ###Instructions
 
