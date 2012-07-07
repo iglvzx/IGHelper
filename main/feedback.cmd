@@ -1,1 +1,1 @@
-﻿find "    Feedback" ighelper.ahk > output.txt
+find "    Feedback" ighelper.ahk > output.txt
