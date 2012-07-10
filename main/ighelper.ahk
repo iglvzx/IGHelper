@@ -86,3 +86,13 @@
     Feedback("Win + N", "Notepad++")
     Run, notepadpp\activate.ahk
     return
+
+; GIMP -------------------------------------------------------------------------
+#IfWinActive – GIMP$
+#g::
+    KeyWaitWin()
+    KeyWait, g
+    Feedback("Win + G", "[GIMP] AutoCrop to Selection")
+    Run, gimp\autocrop.ahk
+    return
+#IfWinActive
