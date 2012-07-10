@@ -6,9 +6,29 @@
 
 #/::
     KeyWaitWin()
-    Keywait, `/
+    KeyWait, `/
     Feedback("Win + /", "Help")
     GoSub, HelpCommand
+    return
+
+; Window -----------------------------------------------------------------------
+#F10::
+    KeyWaitWin()
+    KeyWait, F10
+    Feedback("Win + F10", "Get Window Class")
+    Run, window\get_class.ahk
+    return
+
+#F11::
+    KeyWaitWin()
+    Feedback("Win + F11", "Get Window Size")
+    Run, window\get_size.ahk
+    return
+
+#F12::
+    KeyWaitWin()
+    Feedback("Win + F12", "Set Window Size")
+    Run, window\set_size.ahk
     return
 
 ; Desktop ----------------------------------------------------------------------
