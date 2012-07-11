@@ -32,12 +32,28 @@
     return
 
 ; Desktop ----------------------------------------------------------------------
+#+d::
+    KeyWaitWin()
+    KeyWait, Shift
+    KeyWait, d
+    Feedback("Win + Shift + D", "Toggle Desktop Icons")
+    Run, desktop\toggle_icons.ahk
+    return
+
 #^d::
     KeyWaitWin()
     KeyWait, Ctrl
     KeyWait, d
-    Feedback("Win + Ctrl + D", "Toggle Desktop Icons")
-    Run, desktop\toggle_icons.ahk
+    Feedback("Win + Ctrl + D", "Desktop Background: Black")
+    Run, desktop\background_black.ahk
+    return
+
+#!d::
+    KeyWaitWin()
+    KeyWait, Alt
+    KeyWait, d
+    Feedback("Win + Alt + D", "Desktop Background: White")
+    Run, desktop\background_white.ahk
     return
 
 ; Control Panel ----------------------------------------------------------------
