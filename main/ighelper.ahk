@@ -11,6 +11,13 @@
     GoSub, HelpCommand
     return
 
+#.::
+    KeyWaitWin()
+    KeyWait, .
+    Feedback("Win + .", "Status")
+    Run, main\status.ahk
+    return
+
 ; Window -----------------------------------------------------------------------
 #F10::
     KeyWaitWin()
