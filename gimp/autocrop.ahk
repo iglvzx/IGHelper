@@ -2,7 +2,10 @@
 #Include %A_ScriptDir%\..
 #Include share\config.ahk
 
-SendInput, !ic ; Image > Crop to Selection
-SendInput, !ie ; Image > AutoCrop Image
+; Image > Crop to Selection
+SendInput, !ic
+
+; Image > AutoCrop Image
+SendInput, !ie
 
 ExitApp
