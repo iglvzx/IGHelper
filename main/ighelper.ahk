@@ -110,6 +110,22 @@
     Run, notepadpp\activate.ahk
     return
 
+; TrueCrypt --------------------------------------------------------------------
+#t::
+    KeyWaitWin()
+    KeyWait, t
+    Feedback("Win + T", "TrueCrypt")
+    Run, truecrypt\activate.ahk
+    return
+
+#^t::
+    KeyWaitWin()
+    KeyWait, Ctrl
+    KeyWait, t
+    Feedback("Win + Crtl + T", "TrueCrypt: Dismount Volumes")
+    Run, truecrypt\dismount.ahk
+    return
+
 ; GIMP -------------------------------------------------------------------------
 #IfWinActive – GIMP$
 #g::
