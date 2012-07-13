@@ -128,10 +128,10 @@
 
 ; GIMP -------------------------------------------------------------------------
 #IfWinActive – GIMP$
-#g::
+#x::
     KeyWaitWin()
-    KeyWait, g
-    Feedback("Win + G", "[GIMP] AutoCrop to Selection")
+    KeyWait, x
+    Feedback("Win + X", "[GIMP] AutoCrop to Selection")
     Run, gimp\autocrop.ahk
     return
 #IfWinActive

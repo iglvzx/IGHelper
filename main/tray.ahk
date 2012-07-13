@@ -9,6 +9,13 @@ Menu, Tray, Add
 Menu, Tray, Add, &Suspend, SuspendCommand
 Menu, Tray, Add, &Refresh, RefreshCommand
 Menu, Tray, Add, &Quit, QuitCommand
+
+Gui, CapsLock:New
+Gui, CapsLock:-Caption
+Gui, CapsLock:Color, 000000
+Gui, CapsLock:Font, CFFFFFF W700
+Gui, CapsLock:Add, Text, , CapsLock
+Gui, CapsLock:+AlwaysOnTop +Owner
 return
 
 AboutCommand:
@@ -38,3 +45,14 @@ RefreshCommand:
 
 QuitCommand:
     ExitApp
+
+~CapsLock::
+    if (GetKeyState("CapsLock", "T"))
+    {
+        Gui, CapsLock:Show, X0 Y0 NoActivate
+    }
+    else
+    {
+        Gui, CapsLock:Hide
+    }
+    return
