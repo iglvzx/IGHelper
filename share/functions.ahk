@@ -27,3 +27,33 @@ GetHotkeyList()
     
     return text
 }
+
+StaticNetwork(profile)
+{
+    IniRead, name, %profile%, profile, name
+    IniRead, adapter, %profile%, profile, adapter
+    IniRead, ip, %profile%, profile, ip
+    IniRead, subnet, %profile%, profile, subnet
+    IniRead, gateway, %profile%, profile, gateway
+    IniRead, dns1, %profile%, profile, dns1
+    IniRead, dns2, %profile%, profile, dns2
+
+    command = netsh interface ip set address "%adapter%" static %ip% %subnet% %gateway%
+    FileAppend, %command%`n, run.cmd
+
+    command = ipconfig /flushdns
+    FileAppend, %command%`n, run.cmd
+
+    command = netsh interface ip set dnsservers "%adapter%" static %dns1%
+    FileAppend, %command%`n, run.cmd
+
+    command = netsh interface ip add dnsservers "%adapter%" %dns2%
+    FileAppend, %command%`n, run.cmd
+
+    command = netsh wlan connect "%name%"
+    FileAppend, %command%`n, run.cmd
+
+    RunWait, *RunAs run.cmd
+
+    FileDelete, run.cmd
+}

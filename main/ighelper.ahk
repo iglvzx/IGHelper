@@ -86,6 +86,14 @@
     Run, explorer\home.ahk
     return
 
+; Network ----------------------------------------------------------------------
+#F1::
+    KeyWaitWin()
+    KeyWait, F1
+    Feedback("Win + F1", "Connect to IGalvez.Net")
+    StaticNetwork("network\igalvez-net.ini")
+    return
+
 ; Firefox ----------------------------------------------------------------------
 #f::
     KeyWaitWin()

@@ -16,6 +16,12 @@ Gui, CapsLock:Color, 000000
 Gui, CapsLock:Font, CFFFFFF W700
 Gui, CapsLock:Add, Text, , CapsLock
 Gui, CapsLock:+AlwaysOnTop +Owner
+
+if (GetKeyState("CapsLock", "T"))
+{
+    GoSub, ShowCapsLock
+}
+
 return
 
 AboutCommand:
@@ -46,10 +52,14 @@ RefreshCommand:
 QuitCommand:
     ExitApp
 
+ShowCapsLock:
+    Gui, CapsLock:Show, X0 Y0 NoActivate
+    return
+
 ~CapsLock::
     if (GetKeyState("CapsLock", "T"))
     {
-        Gui, CapsLock:Show, X0 Y0 NoActivate
+        GoSub, ShowCapsLock
     }
     else
     {
