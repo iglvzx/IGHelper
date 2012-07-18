@@ -18,6 +18,19 @@
     Run, main\status.ahk
     return
 
+; Clipboard --------------------------------------------------------------------
+$^c::
+    KeyWait, Ctrl
+    KeyWait, c
+    TextCopy()
+    return
+
+^v::
+    KeyWait, Ctrl
+    KeyWait, v
+    TextTrimPaste()
+    return
+
 ; Window -----------------------------------------------------------------------
 #F10::
     KeyWaitWin()

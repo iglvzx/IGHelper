@@ -9,6 +9,7 @@ SetMouseDelay, -1
 SetControlDelay, -1
 SetWinDelay, -1
 SetTitleMatchMode, RegEx
+AutoTrim, On
 
 ; Environment Variables --------------------------------------------------------
 Drive := "C:"
