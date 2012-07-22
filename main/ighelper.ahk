@@ -19,13 +19,8 @@
     return
 
 ; Clipboard --------------------------------------------------------------------
-$^c::
-    KeyWait, Ctrl
-    KeyWait, c
-    TextCopy()
-    return
 
-^v::
+$^v::
     KeyWait, Ctrl
     KeyWait, v
     TextTrimPaste()

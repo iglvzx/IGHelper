@@ -58,36 +58,46 @@ StaticNetwork(profile)
     FileDelete, run.cmd
 }
 
-TextCopy()
-{
-    Clipboard =
-    SendInput, ^c
-    ClipWait
-    Clipboard = %Clipboard%
-    return
-}
-
 TextTrimPaste()
 {
-    Previous =
+    ClipboardBackup := Clipboard
+    
+    CurrentLine := ""
+    PreviousLine := ""
+    Result := ""
     
     Loop, Parse, Clipboard, `n, `r
     {
-        Text = %A_LoopField%
+        CurrentLine = %A_LoopField%
         
-        if (Text = "" && Previous != "")
+        if (CurrentLine = "" && PreviousLine != "")
         {
-            SendInput, `n
+            Result := Result . "`r`n"
         }
-        else if (Text != "")
+        else if (CurrentLine != "")
         {
-            SendInput, {Raw}%Text%
-            SendInput, `n
+            Result := Result . CurrentLine . "`r`n"
         }
         
-        Previous := Text
+        PreviousLine := CurrentLine
     }
     
-    SendInput, {Backspace}
+    if (CurrentLine = "")
+    {
+        StringTrimRight, Result, Result, 2
+    }
+    
+    StringTrimRight, Result, Result, 2
+    
+    Clipboard =
+    Clipboard := Result
+    Clipwait
+    
+    Send, ^v
+    
+    Clipboard = 
+    Clipboard := ClipboardBackup
+    Clipwait
+    
     return
 }
